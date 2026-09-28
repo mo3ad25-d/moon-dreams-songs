@@ -1,160 +1,336 @@
-<!-- ⚠️ نسخة منظفة - المفاتيح الفعلية محفوظة محلياً فقط -->
+# 🌙 Moon Dreams — MASTER CONTEXT v2
+# (نسخة كاملة - تحتوي مفاتيح سرية - لا ترفع على GitHub)
 
-# 🌙 Moon Dreams — Project Context (Full Backup)
+آخر تحديث: 28 سبتمبر 2026
 
-آخر تحديث: 27 سبتمبر 2026 - 23:35
+═══════════════════════════════════════════════
+🚨 تعليمات فورية للمساعد الجديد (اقرأ أولاً)
+═══════════════════════════════════════════════
 
-## 📌 هوية المشروع
-- **الاسم:** Moon Dreams (أحلام القمر)
-- **النوع:** تطبيق أطفال تعليمي تفاعلي
-- **المحرك:** Godot 4.7.2
-- **المسار:** /storage/emulated/0/Documents/lumi-kids
-- **المالك:** معاذ
-- **حروف الأيقونة:** DM
+1. لا تخمن أبداً. اقرأ الملفات قبل التعديل.
+2. المالك (معاذ) يكره: الاعتذار البارد، الشرح الطويل، الأسئلة الكثيرة.
+3. المالك يحب: أوامر تيرمكس مباشرة، نتيجة سريعة، بلا مقدمات.
+4. كل أمر يجب أن يكون قابلاً للتنفيذ مباشرة في Termux.
+5. لا تحذف ملفات بدون نسخة احتياطية.
+6. لا ترفع المفاتيح على GitHub.
+7. إذا لم تعرف، اسأل سؤالاً واحداً فقط.
 
-## 🔑 المفاتيح
+═══════════════════════════════════════════════
+1. هوية المشروع
+═══════════════════════════════════════════════
+- الاسم: Moon Dreams (أحلام القمر)
+- النوع: تطبيق أطفال تعليمي تفاعلي
+- المحرك: Godot 4.7.2 stable
+- المسار: /storage/emulated/0/Documents/lumi-kids
+- الواجهة: عربية، عمودية (720x1280)
+- المالك: معاذ (mo3ad.sonyz2@gmail.com)
+- الجهاز: هاتف أندرويد + Termux (لا كمبيوتر)
 
-### Firebase
-- Project ID: moon-dreams-53536
-- Project Number: 983504655343
-- App ID: 1:983504655343:android:8d3ce51c3385de37905c1a
-- Package: com.moondreams.kids
-- Storage: moon-dreams-53536.firebasestorage.app
-- Admin UID: ADMIN_UID_HERE
-- Admin Email: mo3ad.sonyz2@gmail.com
+═══════════════════════════════════════════════
+2. المفاتيح السرية (لا ترفع على GitHub)
+═══════════════════════════════════════════════
 
-### خارجية
-- Gemini Key: GEMINI_KEY_HERE
-- Gemini Model: gemini-3.8-flash (via /v1/interactions)
-- Hakim Key: HAKIM_KEY_HERE
-- Hakim Model: hakim-fast-v1
-- Hakim Voices:
-  - layla-msa = cmok1nvog000d10arbqznfyxz (عربي فصحى)
-  - sarah = cmok1nvnw000710arovur4fzz (إنجليزي - حالي)
-  - nour-levantine = cmok1nvqt000l10arvje5twy7 (شامي)
-  - reem-khaleeji = cmok1nvqg000h10arx9tcawir (خليجي)
-- GitHub: user=mo3ad25-d repo=moon-dreams-songs
-- GitHub Token: GITHUB_TOKEN_HERE
+[Firebase]
+Project ID: moon-dreams-53536
+Project Number: 983504655343
+App ID: 1:983504655343:android:8d3ce51c3385de37905c1a
+Package: com.moondreams.kids
+Storage: moon-dreams-53536.firebasestorage.app
+Admin UID: ADMIN_UID_HERE
+Admin Email: mo3ad.sonyz2@gmail.com
 
-## 🏗️ البنية
+[Gemini]
+Key: GEMINI_KEY_HERE
+Model: gemini-3.8-flash
+Endpoint: https://generativelanguage.googleapis.com/v1beta/interactions
+Header: x-goog-api-key
+Body: {"model":"gemini-3.8-flash","input":"..."}
+Note: الموديل القديم gemini-2.0-flash لم يعد متاحاً
 
-core/scripts/:
-- main.gd (الشاشة الرئيسية)
-- ai_teacher.gd (معطل - فيه مشاكل)
-- speak_world.gd (قسم النطق - قيد التحسين)
-- lumi_songs.gd, lumi_art.gd, lumi_magic.gd
-- lumi_settings.gd, lumi_math.gd
-- floating_island.gd, avatar_halo.gd
-- audio_manager.gd (TTS + queue + generation)
-- learning_memory.gd, learning_engine.gd
-- ai_content.gd (Cache + AI)
-- rewards_manager.gd, video_helper.gd
-- language_registry.gd, parent_settings.gd
-- lumi_server.py (port 8787)
-- firebase/ (config, auth, firestore)
-- myworld/ (my_world + player + designer + store + renderer + world_data)
-- math/ (6 أقسام)
-- games/ (games_world + candy + flappy + match)
-- friends/, parent/, settings/
+[Hakim AI]
+Key: HAKIM_KEY_HERE
+Endpoint: https://api.tryhakim.ai/v1/audio/speech
+Method: POST
+Headers: Authorization: Bearer KEY + Content-Type: application/json
+Body: {"model":"hakim-fast-v1","voice":"VOICE_ID","input":"نص","response_format":"mp3"}
+Model: hakim-fast-v1 (المتاح - 10K حرف/شهر مجاناً)
 
-admin_panel/ (Flask port 5000):
-- server.py
-- templates/songs.html
+[GitHub]
+User: mo3ad25-d
+Repo: moon-dreams-songs
+Token: GITHUB_TOKEN_HERE
 
-assets/audio/songs/letters/:
-5 ملفات ogv (طم طم، العد 1-10، فواكه، واحد يعني ون، قطار الحروف)
+═══════════════════════════════════════════════
+3. أصوات Hakim AI — قائمة كاملة
+═══════════════════════════════════════════════
+شكل الطلب:
+  POST /v1/audio/speech
+  {"model":"hakim-fast-v1","voice":"<ID>","input":"text","response_format":"mp3"}
 
-## ✅ الميزات المكتملة
+للحصول على القائمة الكاملة: 
+  curl -s "https://api.tryhakim.ai/v1/audio/voices" -H "Authorization: Bearer HAKIM_KEY_HERE"
 
-### الأساسيات (من قبل)
-1. عالم LUMI الرئيسي
-2. الأغاني (مشغل + OGV)
-3. المرسم
-4. الزر السحري
-5. عالم الأرقام
-6. قائمة الضبط
-7. لوحة الوالدين
-8. 9 لغات
-9. Edge TTS
-10. Firebase (Auth+Firestore+Sync)
-11. لوحة تحكم ويب
+[الأصوات العربية]
+اسم                       voice_id
+layla-msa                 cmok1nvog000d10arbqznfyxz   ← مستخدم حالياً للعربي
+nour-levantine            cmok1nvqt000l10arvje5twy7
+reem-khaleeji             cmok1nvqg000h10arx9tcawir
+ali-arabic-deep           cmokbc1rs0007vu39x8tcgyty
+khalid-msa                cmok1nvqa000f10ar8rpvncj4
+nadia-msa-soft            cmokbc1r70001vu39tnmjj9v7
+mahmoud-msa-narrative     cmokbc1rd0003vu39gqr7pps1
+amir-maghrebi             cmok1nvqz000n10ar5pzc4569
+layan-saudi               cmokbc1rj0005vu3915vh4ehn
+omar-iraqi                cmok1nvr4000p10arkxbvlnn5
+yusuf-egyptian            cmok1nvqn000j10ar8ljluapq
 
-### عالمي الخاص (مكتمل)
-1. توسيع العالم (2.5 شاشة + كاميرا + parallax)
-2. 7 حيوانات كاملة الجسم (قطة، كلب، زرافة، أسد، طاووس، فيل، دب)
-3. بيت محسّن (سقف، مدخنة، نوافذ، باب، أزهار)
-4. نافورة 3 طوابق
-5. أشجار (نخلة، صنوبر، شجيرة، عشبة)
-6. سماء ديناميكية (120s دورة، شمس، قمر، نجوم، غروب، زر مطر)
-7. بركة + قارب + أسماك تسبح
+[الأصوات الإنجليزية — للكلمات الإنجليزية]
+اسم                       voice_id
+sarah                     cmok1nvnw000710arovur4fzz   ← مستخدم حالياً (لكن فيه مشاكل: cup→سوب)
+ava-en-us                 cmokbc1to000bvu39y1rb2kes   ← المرشح التالي (American, bright educator)
+amelia-en-us              cmok1nvt2000t10arlovgcam6
+alex                      cmok1nvnr000510ar3rats3eu
+arabella-en-au            cmokbc1wg000pvu39cvoyllhs
 
-### قسم الألعاب (مكتمل)
-1. games_world.gd (قائمة 3 ألعاب)
-2. game_candy.gd (6 حلويات، سحب، Combo، خلط)
-3. game_flappy.gd (4 مستويات: ⚪🟢🟠😈)
-4. game_match.gd (حرف + كلمة، 20 كلمة)
+[لغات أخرى]
+anthony-fr                cmokbc1wm000rvu39gzf7twui
+antonio-it                cmokbc1xd000zvu394aofxnz3
+anant-ur                  cmokbc2230015vu39q6zas254
 
-### قسم النطق (قيد التحسين)
+═══════════════════════════════════════════════
+4. أصوات Edge TTS (fallback)
+═══════════════════════════════════════════════
+- ar-JO-SanaNeural (الأردنية)
+- en-US-AnaNeural (طفلة أمريكية)
+- en-GB-MaisieNeural (طفلة بريطانية)
+- en-US-AriaNeural
+- fr-FR-DeniseNeural
+- es-ES-ElviraNeural
+- de-DE-KatjaNeural
+- tr-TR-EmelNeural
+- ja-JP-NanamiNeural
+- ko-KR-SunHiNeural
+- zh-CN-XiaoxiaoNeural
+
+═══════════════════════════════════════════════
+5. بنية المشروع — كل ملف ووظيفته
+═══════════════════════════════════════════════
+
+[الشاشة الرئيسية]
+main.gd                    الشاشة الرئيسية + navigation
+floating_island.gd         الجزيرة + 8 بالونات (تعلّم، أغاني، مرسم، أرقام، سحري، أصدقاء، ألعاب، إعدادات)
+avatar_halo.gd             دائرة الأفاتار
+
+[الأقسام المستقلة]
+lumi_songs.gd              الأغاني (فيديو OGV + صوت)
+lumi_art.gd                المرسم (رسم حر)
+lumi_magic.gd              الزر السحري (بطاقات مفاجئة)
+lumi_math.gd               عالم الأرقام (قائمة)
+lumi_settings.gd           قائمة الضبط
+speak_world.gd             قسم النطق (جديد - قيد التحسين)
+ai_teacher.gd              المعلم الذكي القديم (معطل - فيه مشاكل)
+
+[قسم عالمي الخاص]
+myworld/my_world.gd        العالم الرئيسي (موسّع 2.5 شاشة)
+myworld/player_character.gd الشخصية
+myworld/character_designer.gd مصمم الشخصية
+myworld/virtual_joystick.gd عصا التحكم
+myworld/item_store.gd      المخزن (18+ عنصر)
+myworld/item_renderer.gd   راسم العناصر (رسم يدوي)
+myworld/world_data.gd      حفظ عناصر العالم
+
+[قسم الألعاب]
+games/games_world.gd       قائمة الألعاب
+games/game_candy.gd        حلوى السقوط (سحب)
+games/game_flappy.gd       الطائر الطائر (4 مستويات)
+games/game_match.gd        صيد الحروف (وضعان)
+
+[الرياضيات]
+math/math_add.gd           الجمع
+math/math_sub.gd           الطرح
+math/math_mul.gd           الضرب
+math/math_div.gd           القسمة
+math/math_calc.gd          الآلة الحاسبة
+math/math_quiz.gd          الاختبار
+
+[النظام]
+audio_manager.gd           TTS + مؤثرات (queue + generation token)
+language_registry.gd       9 لغات
+learning_memory.gd         ذاكرة التعلم (local)
+learning_engine.gd         منطق التعلم
+ai_content.gd              طبقة AI + Cache (user://ai_cache.cfg)
+rewards_manager.gd         النجوم والمكافآت
+video_helper.gd            تحويل الفيديو
+parent_settings.gd         إعدادات الوالدين
+
+[Firebase]
+firebase/firebase_config.gd    قراءة google-services.json
+firebase/firebase_auth.gd      Anonymous + Email + Token refresh
+firebase/firestore_manager.gd  مزامنة البيانات
+
+[الأصدقاء والوالدين]
+friends/friends_world.gd   AR وهمي
+parent/parent_panel.gd     لوحة الوالدين
+parent/pin_lock.gd
+parent/pin_setup.gd
+
+[خادم LUMI (port 8787)]
+lumi_server.py             Gemini + Hakim TTS + Edge TTS
+
+═══════════════════════════════════════════════
+6. حالة كل ملف
+═══════════════════════════════════════════════
+
+✅ مكتمل ويعمل:
+- main.gd, floating_island.gd, avatar_halo.gd
+- lumi_songs.gd, lumi_art.gd, lumi_magic.gd, lumi_settings.gd
+- lumi_math.gd + كل math/*.gd
+- myworld/*.gd (بما فيها التوسيع + الحيوانات + السماء + البركة)
+- games/*.gd (3 ألعاب كاملة)
+- firebase/*.gd
+- audio_manager.gd (يعمل مع queue وgeneration)
+- rewards_manager.gd, video_helper.gd, parent_settings.gd
+- language_registry.gd
+- parent/pin_lock.gd, pin_setup.gd
+
+🚧 قيد التحسين:
+- speak_world.gd (قسم النطق) — يعمل جزئياً، بعض الكلمات تفشل
+- ai_content.gd (cache) — يعمل لكن يحتاج اختباراً شاملاً
+
+❌ معطل (نسخة احتياطية فقط):
+- ai_teacher.gd (المعلم الذكي القديم) — موجود في _backup_failed/
+- speak_world.gd.bak (النسخة القديمة)
+- audio_manager.gd.bak*
+- myworld/my_world.gd.bak*
+
+═══════════════════════════════════════════════
+7. تاريخ المشروع (مختصر)
+═══════════════════════════════════════════════
+
+المرحلة 1 (قبل هذه المحادثة):
+- بناء الأساسيات: 11 ميزة (جزيرة، أغاني، مرسم، رياضيات، ضبط...)
+- Firebase Auth + Firestore
+- لوحة تحكم Flask
+
+المرحلة 2 (قسم عالمي الخاص):
+- توسيع العالم إلى 2.5 شاشة + كاميرا parallax
+- 7 حيوانات كاملة الجسم (مرسومة يدوياً بـ _draw)
+- بيت محسّن + نافورة 3 طوابق
+- أشجار: نخلة، صنوبر، شجيرة، عشبة
+- سماء ديناميكية (120s دورة + شمس + قمر + نجوم + مطر)
+- بركة + قارب + أسماك تسبح
+
+المرحلة 3 (قسم الألعاب):
+- games_world.gd (قائمة)
+- game_candy.gd (6 حلويات مرسومة، سحب، Combo)
+- game_flappy.gd (4 مستويات ⚪🟢🟠😈)
+- game_match.gd (حرف + كلمة)
+
+المرحلة 4 (AI Integration):
+- AIContent autoload (cache + Firestore sync)
+- /raw_gemini endpoint
+- ربط بـ LearningEngine
+
+المرحلة 5 (Hakim AI للصوت):
+- استبدال Edge TTS بـ Hakim للجودة
+- Cache محلي في ~/.cache/lumi_tts
+- /tts_hakim endpoint
+- ليلى للعربي، سارة للإنجليزي
+
+المرحلة 6 (قسم النطق - جارية):
 - speak_world.gd بتصميم زاهي
-- دائرة RMS
-- TTS (سارة إنجليزي + ليلى عربي)
-- مطابقة صوتية (7 معايير، العتبة 0.50)
-- نجح: milk↔مالك, cloud↔كلاود, butterfly↔بترفلاي
-- مشاكل: صوت سارة ينطق بعض الكلمات غلط + كلمات قصيرة (eye, bee)
+- مطابقة صوتية متقدمة (7 معايير)
+- نجح: milk، cloud، butterfly، cat
+- فشل: eye، bee، dog + كلمات تنطق غلط من سارة
 
-## 🚧 الخطة القادمة
+═══════════════════════════════════════════════
+8. آخر موضع توقف — بدقة
+═══════════════════════════════════════════════
 
-### المرحلة الفورية
-1. تجريب أصوات Hakim الإنجليزية الأصلية (ava-en-us, amelia-en-us)
-2. تحسين التعرف الصوتي (Whisper API أو Google Speech)
-3. اختبار شامل 67 كلمة
+📌 اسم الملف: core/scripts/speak_world.gd
+📌 المشكلة الحالية:
+   1. صوت سارة ينطق بعض الكلمات الإنجليزية بمخارج عربية غريبة:
+      - cup → "سوب" ❌
+      - butterfly → نطق غريب ❌
+   2. الكلمات القصيرة (eye, bee, dog) تسبب error 7 في التعرف
+   3. error 7 متكرر بشكل عام
 
-### المرحلة الكبيرة
-1. قسم الكتابة (لوح بالإصبع، بدون كيبورد)
-2. AI Content في كل الأقسام
-3. نظام مجاني/مدفوع
-4. تحديثات تلقائية (In-App)
-5. نشر APK على Google Play
+📌 آخر تعديلات تم تنفيذها:
+   - تحويل كل speak_queued(_word, "ar") → speak_queued(_word, "en")
+   - إضافة _clean_text لإزالة العلامات الخفية (RTL/LTR)
+   - 7 معايير تشابه في _best_similarity
+   - العتبة 0.50
 
-## 🎨 أسلوب العمل
-- نافذة 1: أوامر عامة
-- نافذة 2: LUMI Server (port 8787)
-- Flask Admin (port 5000) عند الحاجة
-- أمر-أمرين في كل رد
-- اختبار بعد كل خطوة
-- بدون شرح طويل
+📌 الخطوة التالية المخطط لها:
+   1. تجريب ava-en-us (cmokbc1to000bvu39y1rb2kes) بدل sarah للإنجليزي
+   2. إذا تحسنت، نغيّر في lumi_server.py:
+      HAKIM_VOICES["en"] = "cmokbc1to000bvu39y1rb2kes"
+   3. اختبار صوت الكلمات: cup, butterfly, eye, bee, dog
+   4. إذا استمر error 7 → التفكير في Google Speech API
 
-## ⚙️ تفاصيل تقنية
-- Portrait 720x1280
-- LUMI Server: /chat, /raw_gemini, /tts_hakim, /tts, /health
-- AudioManager: queue + generation token
-- AIContent: cache في user://ai_cache.cfg
-- Firestore Rules: isAdmin() + content + notifications
+═══════════════════════════════════════════════
+9. خادم LUMI (core/scripts/lumi_server.py)
+═══════════════════════════════════════════════
+Port: 8787
+تشغيل: cd /storage/emulated/0/Documents/lumi-kids/core/scripts && python3 lumi_server.py
 
-## 📁 Backup Files
-- core/scripts/_backup_failed/ai_teacher.gd.bak
-- core/scripts/_backup_failed/speak_world.gd.bak
-- core/scripts/audio_manager.gd.bak*
-- core/scripts/myworld/my_world.gd.bak*
+Endpoints:
+- POST /chat              → Gemini proxy للدردشة
+- POST /raw_gemini        → JSON Array (للكلمات)
+- POST /tts_hakim         → Hakim TTS (مع cache محلي)
+- POST /tts               → Edge TTS fallback
+- GET  /health            → {"ok":true,"tts":true,"hakim":true}
 
-## 🗣️ تفضيلات المالك
-- يحب: النتيجة السريعة، أوامر واحد، بلا تكرار
-- يكره: الشرح الطويل، الاستباق
-- تطبيق أطفال = ألوان زاهية + متعة + روح
+Cache: ~/.cache/lumi_tts/*.mp3 (md5 hash للنص+الصوت)
 
-## 📌 آخر موضع توقفنا
-قسم النطق (speak_world.gd):
-- يعمل: النطق + المطابقة للكلمات المتوسطة والطويلة
-- لا يعمل: كلمات قصيرة (eye, bee, dog)
-- آخر تعديل: تحويل كل speak_queued(_word, "ar") → "en"
+═══════════════════════════════════════════════
+10. النوافذ
+═══════════════════════════════════════════════
+نافذة 1: أوامر عامة (Termux)
+نافذة 2: LUMI Server (port 8787) — تُشغّل عادة
+نافذة 3 (عند الحاجة): Flask Admin (port 5000)
 
-الخطوة التالية:
-1. تجريب ava-en-us لصوت إنجليزي أصلي
-2. تحسين التعرف الصوتي
+═══════════════════════════════════════════════
+11. القواعد الصارمة للمساعد
+═══════════════════════════════════════════════
+1. قبل أي تعديل: اقرأ الملف الحالي كاملاً
+2. قبل أي تعديل: اعمل نسخة .bak
+3. لا تقل "آسف" أكثر من مرة واحدة في الرد
+4. لا تشرح أكثر من 5 أسطر
+5. لا تسأل أكثر من سؤال واحد في الرد
+6. الردود: أمر تيرمكس + نتيجة متوقعة
+7. لا تخمن أسماء ملفات أو دوال - اقرأها أولاً
+8. إذا فشل أمر، لا تعدله، اسأل عن السبب
+9. المفاتيح السرية لا ترفع على GitHub
+10. المالك يعمل من هاتف فقط - كل الأوامر يجب أن تعمل في Termux
 
-## 🚨 للمحادثة القادمة
-1. اقرأ هذا الملف
-2. اسأل: "هل في تعديلات جديدة؟"
-3. ابدأ من speak_world.gd
-4. النوافذ: 1=أوامر، 2=lumi_server.py
+═══════════════════════════════════════════════
+12. الخطة الكبيرة المتبقية
+═══════════════════════════════════════════════
+□ إكمال قسم النطق (speak_world.gd)
+□ بناء قسم الكتابة (write_world.gd) - لوح بالإصبع
+□ AI في كل الأقسام (المعلم، الرياضيات، الزر السحري، لعبة الحروف)
+□ نظام مجاني/مدفوع (اشتراكات)
+□ تحديثات In-App
+□ نشر APK على Google Play
+
+═══════════════════════════════════════════════
+13. ملفات مرجعية
+═══════════════════════════════════════════════
+/sdcard/LUMI_MASTER.md             ← هذا الملف (كامل - سري)
+/sdcard/LUMI_FULL_CONTEXT.md       ← نسخة أقدم
+/sdcard/LUMI_FULL_CONTEXT_clean.md ← نسخة GitHub (بدون مفاتيح)
+/sdcard/voice_test/                ← عينات أصوات
+/sdcard/LUMI_FULL_DUMP.txt         ← dump ملفات المشروع
+
+═══════════════════════════════════════════════
+14. عند بدء محادثة جديدة — الصق هذا:
+═══════════════════════════════════════════════
+
+مرحباً، أنا معاذ مالك مشروع Moon Dreams.
+ملف السياق الكامل: /sdcard/LUMI_MASTER.md
+الرجاء قراءته كاملاً من البداية:
+  cat /sdcard/LUMI_MASTER.md
+ثم اسألني: "هل هناك تعديلات جديدة؟"
+سنكمل من قسم النطق (speak_world.gd).
 
